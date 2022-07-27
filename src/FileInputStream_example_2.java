@@ -4,7 +4,13 @@ public class FileInputStream_example_2 {
     public static void main(String[] args) {
         try{
             FileInputStream fin = new FileInputStream("D:\\testout.txt");
-
-        }catch(Exception e){ System.out.println(e);}
+            int i = 0;
+            while((i=fin.read())!= -1){
+                System.out.print( (char)i );
+            }
+            fin.close();
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }
 }
